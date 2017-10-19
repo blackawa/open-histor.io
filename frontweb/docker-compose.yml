@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.0
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "p@ssw0rd"
+      POSTGRES_USER: "frontweb"
+      POSTGRES_DB: "frontweb"
