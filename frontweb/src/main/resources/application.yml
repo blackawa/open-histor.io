@@ -1,10 +1,9 @@
 spring:
   datasource:
-    url: 'jdbc:postgresql://localhost:5432/frontweb'
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
-    username: 'frontweb'
-    password: 'p@ssw0rd'
+    username: {USERNAME}
+    password: {PASSWORD}
   thymeleaf:
     mode: 'LEGACYHTML5'

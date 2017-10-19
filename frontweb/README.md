@@ -8,7 +8,7 @@ To turn up a development middleware, execute
 
 To run application, execute
 
-    ./gradlew bootRun
+    SPRING_PROFILES_ACTIVE=local ./gradlew bootRun
 
 ## Deployment
 

@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/frontweb'
+    username: 'frontweb'
+    password: 'p@ssw0rd'
+  thymeleaf:
+    cache: false
+flyway:
+  locations:
+    - "db/migration"
+    - "db/local/migration"
