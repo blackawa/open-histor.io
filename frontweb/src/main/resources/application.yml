@@ -7,3 +7,7 @@ spring:
     password: {PASSWORD}
   thymeleaf:
     mode: 'LEGACYHTML5'
+mybatis:
+  mapper-locations: classpath:db/repository/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
