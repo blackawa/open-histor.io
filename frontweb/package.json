@@ -1,0 +1,19 @@
+{
+  "name": "frontweb",
+  "version": "1.0.0",
+  "description": "[open-histor.io](https://open-histor.io) frontend application.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp sass:watch",
+    "build": "gulp sass:build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.6.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
