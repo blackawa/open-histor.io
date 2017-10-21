@@ -5,7 +5,7 @@ const plumber = require('gulp-plumber');
 
 const variables = {
     src: {
-        scss: 'src/main/scss/*.{scss,css}'
+        scss: 'src/main/scss/**/*.{scss,css}'
     },
     dest: {
         stylesheets: 'src/main/resources/static/stylesheets'
