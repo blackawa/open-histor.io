@@ -6,6 +6,7 @@ node_modules
 npm-debug.log
 
 src/main/resources/static/stylesheets
+src/main/resources/static/fonts
 
 ### STS ###
 .apt_generated
