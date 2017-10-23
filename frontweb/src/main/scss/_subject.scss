@@ -1,0 +1,27 @@
+.subject {
+  height: 100%;
+  display: flex;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: $primary;
+    width: 5px;
+  }
+}
+
+.epochs {
+  margin-left: 1rem;
+  & > li {
+    margin-left: 1rem;
+  }
+
+  & > .epoch {
+    writing-mode: vertical-rl;
+    width: 2rem;
+    padding: 0 0.2rem;
+    background: $primary;
+    color: $primary-invert;
+  }
+}
