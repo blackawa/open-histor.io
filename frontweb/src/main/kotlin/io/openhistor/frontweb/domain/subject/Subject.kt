@@ -10,6 +10,5 @@ import io.openhistor.frontweb.domain.subject.epoch.event.Events
 class Subject (
     private val name: Name,
     private val annotation: Annotation,
-    private val events: Events,
-    private val epochs: Epochs
+    private val events: Events
 )
