@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.presentation.controller
+package io.openhistor.frontweb.layer.presentation.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
