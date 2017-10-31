@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.user.attribute
+package io.openhistor.frontweb.domain.user
 
 class EmailAddress(private val emailAddress: String) {
     init {

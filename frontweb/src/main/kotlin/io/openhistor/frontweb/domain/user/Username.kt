@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.user.attribute
+package io.openhistor.frontweb.domain.user
 
 class Username(private val name: String) {
     init {

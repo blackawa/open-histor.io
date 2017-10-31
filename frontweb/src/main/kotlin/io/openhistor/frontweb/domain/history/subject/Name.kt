@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.subject.attribute
+package io.openhistor.frontweb.domain.history.subject
 
 class Name(private val name: String) {
     init {

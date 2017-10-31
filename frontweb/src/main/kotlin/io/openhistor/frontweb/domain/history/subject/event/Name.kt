@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.subject.epoch.event.attribute
+package io.openhistor.frontweb.domain.history.subject.event
 
 class Name(private val name: String) {
     init {

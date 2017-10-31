@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.subject.attribute
+package io.openhistor.frontweb.domain.history.subject
 
 class Annotation(private val annotation: String) {
     init {

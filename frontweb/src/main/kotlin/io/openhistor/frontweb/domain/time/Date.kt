@@ -1,4 +1,4 @@
-package io.openhistor.frontweb.domain.subject.epoch.event.attribute.time
+package io.openhistor.frontweb.domain.time
 
 import java.time.LocalDate
 
