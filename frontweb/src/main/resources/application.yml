@@ -7,6 +7,10 @@ spring:
     password: {PASSWORD}
   thymeleaf:
     mode: 'LEGACYHTML5'
+  social:
+    twitter:
+      app-id: {TWITTER_APP_ID}
+      app-secret: {TWITTER_APP_SECRET}
 mybatis:
   mapper-locations: classpath:db/repository/*.xml
   configuration:

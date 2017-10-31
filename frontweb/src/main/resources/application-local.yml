@@ -5,6 +5,8 @@ spring:
     password: 'p@ssw0rd'
   thymeleaf:
     cache: false
+  profiles:
+    include: "secret"
 flyway:
   locations:
     - "db/migration"
