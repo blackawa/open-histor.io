@@ -15,4 +15,7 @@
  :open-historio.handler/top {}
  :open-historio.handler.user/new {}
  :open-historio.handler.user/create {:db #ig/ref :duct.database/sql}
- :open-historio.handler.subject/index {:db #ig/ref :duct.database/sql}}
+ :open-historio.handler.subject/index {:db #ig/ref :duct.database/sql}
+
+ :duct.migrator/ragtime
+ {:migrations [#ig/ref :open-historio.migration/create-users]}}
