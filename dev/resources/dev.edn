@@ -2,4 +2,4 @@
  :duct.core/include ["open_historio/config"]
 
  :duct.module/sql
- {:database-url "jdbc:postgresql://localhost/postgres"}}
+ {:database-url "jdbc:postgresql://localhost/open_historio?user=open_historio&password=p@ssw0rd"}}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.1
+    environment:
+      POSTGRES_PASSWORD: 'p@ssw0rd'
+      POSTGRES_USER: 'open_historio'
+      POSTGRES_DB: 'open_historio'
+    ports:
+      - "5432:5432"

@@ -6,7 +6,13 @@
  :duct.module/sql {}
 
  :duct.module/ataraxy
- {[:get "/example"] [:example]}
+ {[:get "/"] [:top]
+  "/users" {[:get "/new"] [:user/new]
+            [:post {user :params}] [:user/create user]}
+  "/subjects" {[:get] [:subject/index]}}
 
- :open-historio.handler/example
- {:db #ig/ref :duct.database/sql}}
+ ;; :open-historio.handler/example {:db #ig/ref :duct.database/sql}
+ :open-historio.handler/top {}
+ :open-historio.handler.user/new {}
+ :open-historio.handler.user/create {:db #ig/ref :duct.database/sql}
+ :open-historio.handler.subject/index {:db #ig/ref :duct.database/sql}}
