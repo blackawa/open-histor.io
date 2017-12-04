@@ -7,15 +7,19 @@
 
  :duct.module/ataraxy
  {[:get "/"] [:top]
-  "/users" {[:get "/new"] [:user/new]
-            [:post {user :params}] [:user/create user]}
+  "/accounts" {[:get "/new"] [:account/new]
+               [:post {account :params}] [:account/create account]}
   "/subjects" {[:get] [:subject/index]}}
 
  ;; :open-historio.handler/example {:db #ig/ref :duct.database/sql}
  :open-historio.handler/top {}
- :open-historio.handler.user/new {}
- :open-historio.handler.user/create {:db #ig/ref :duct.database/sql}
+ :open-historio.handler.account/new {}
+ :open-historio.handler.account/create {:db #ig/ref :duct.database/sql}
  :open-historio.handler.subject/index {:db #ig/ref :duct.database/sql}
 
  :duct.migrator/ragtime
- {:migrations [#ig/ref :open-historio.migration/create-users]}}
+ {:migrations [#ig/ref :open-historio.migration/create-accounts]}
+
+ [:duct.migrator.ragtime/sql :open-historio.migration/create-accounts]
+ {:up [#duct/resource "open_historio/migrations/create-accounts.up.sql"]
+  :down [#duct/resource "open_historio/migrations/create-accounts.down.sql"]}}

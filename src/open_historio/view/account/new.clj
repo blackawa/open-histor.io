@@ -1,4 +1,4 @@
-(ns open-historio.view.user.new
+(ns open-historio.view.account.new
   (:require [hiccup.core :as hiccup]
             [hiccup.form :refer [form-to label text-field email-field password-field submit-button]]
             [ring.util.anti-forgery :refer [anti-forgery-field]]))
