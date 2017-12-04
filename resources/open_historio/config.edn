@@ -11,7 +11,6 @@
                [:post {account :params}] [:account/create account]}
   "/subjects" {[:get] [:subject/index]}}
 
- ;; :open-historio.handler/example {:db #ig/ref :duct.database/sql}
  :open-historio.handler/top {}
  :open-historio.handler.account/new {}
  :open-historio.handler.account/create {:db #ig/ref :duct.database/sql}
