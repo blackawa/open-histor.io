@@ -9,7 +9,8 @@
                  [duct/module.ataraxy "0.2.0"]
                  [duct/module.sql "0.4.2"]
                  [hiccup "1.0.5"]
-                 [org.postgresql/postgresql "42.1.4"]]
+                 [org.postgresql/postgresql "42.1.4"]
+                 [buddy "2.0.0"]]
   :plugins [[duct/lein-duct "0.10.5"]]
   :main ^:skip-aot open-historio.main
   :uberjar-name  "open-historio-standalone.jar"

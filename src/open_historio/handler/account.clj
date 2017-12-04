@@ -12,5 +12,6 @@
 
 (defmethod ig/init-key ::create [_ {:keys [db]}]
   (fn [{[_ account] :ataraxy/result}]
-    (create db (select-keys account [:name :email :password]))
-    [::response/see-other "/subjects"]))
+    (let [created-account
+          (create db (select-keys account [:name :email :password]))]
+      [::response/see-other "/subjects"])))

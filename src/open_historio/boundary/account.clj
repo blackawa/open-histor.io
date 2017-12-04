@@ -1,5 +1,6 @@
 (ns open-historio.boundary.account
-  (:require [clojure.java.jdbc :as jdbc]
+  (:require [buddy.hashers :as hs]
+            [clojure.java.jdbc :as jdbc]
             [duct.database.sql]))
 
 (defprotocol Accounts
@@ -8,4 +9,7 @@
 (extend-protocol Accounts
   duct.database.sql.Boundary
   (create [{db :spec} account]
-    (val (ffirst (jdbc/insert! db :accounts account)))))
+    (ffirst (jdbc/insert!
+             db
+             :accounts
+             (update account :password #(hs/encrypt %))))))
