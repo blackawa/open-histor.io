@@ -18,8 +18,12 @@
  :open-historio.handler.subject/index {:db #ig/ref :duct.database/sql}
 
  :duct.migrator/ragtime
- {:migrations [#ig/ref :open-historio.migration/create-accounts]}
+ {:migrations [#ig/ref :open-historio.migration/create-accounts
+               #ig/ref :open-historio.migration/create-sessions]}
 
  [:duct.migrator.ragtime/sql :open-historio.migration/create-accounts]
  {:up [#duct/resource "open_historio/migrations/create-accounts.up.sql"]
-  :down [#duct/resource "open_historio/migrations/create-accounts.down.sql"]}}
+  :down [#duct/resource "open_historio/migrations/create-accounts.down.sql"]}
+ [:duct.migrator.ragtime/sql :open-historio.migration/create-sessions]
+ {:up [#duct/resource "open_historio/migrations/create-sessions.up.sql"]
+  :down [#duct/resource "open_historio/migrations/create-sessions.down.sql"]}}

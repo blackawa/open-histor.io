@@ -4,6 +4,7 @@
             [duct.database.sql]
             [integrant.core :as ig]
             [open-historio.boundary.account :refer [create]]
+            [open-historio.boundary.session :refer [sign-in]]
             [open-historio.view.account.new :as new]))
 
 (defmethod ig/init-key ::new [_ options]
@@ -12,6 +13,5 @@
 
 (defmethod ig/init-key ::create [_ {:keys [db]}]
   (fn [{[_ account] :ataraxy/result}]
-    (let [created-account
-          (create db (select-keys account [:name :email :password]))]
-      [::response/see-other "/subjects"])))
+    (let [id (create db (select-keys account [:name :email :password]))]
+      {:status 303 :headers {"Location" "/subjects"} :session {:id id} :body nil})))

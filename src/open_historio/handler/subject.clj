@@ -5,5 +5,5 @@
             [open-historio.view.subject.index :as index]))
 
 (defmethod ig/init-key ::index [_ {db :db}]
-  (fn [{[_] :ataraxy/result}]
+  (fn [{[_] :ataraxy/result session :session}]
     [::response/ok (index/html)]))
