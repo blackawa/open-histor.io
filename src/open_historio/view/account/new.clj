@@ -5,9 +5,15 @@
 
 (defn html []
   (hiccup/html
-   (form-to [:post "/users"]
+   (form-to [:post "/accounts"]
             [:div
              (label "username" "username")
              (text-field {:placeholder "username"} "username")]
+            [:div
+             (label "email" "email")
+             (email-field {:placeholder "foo@example.com"} "email")]
+            [:div
+             (label "password" "password")
+             (password-field "password")]
             (anti-forgery-field)
             [:div (submit-button "create")])))

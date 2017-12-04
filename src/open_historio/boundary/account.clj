@@ -3,9 +3,9 @@
             [duct.database.sql]))
 
 (defprotocol Accounts
-  (create [db user]))
+  (create [db account]))
 
 (extend-protocol Accounts
   duct.database.sql.Boundary
-  (create [db account]
+  (create [{db :spec} account]
     (val (ffirst (jdbc/insert! db :accounts account)))))
