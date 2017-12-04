@@ -7,8 +7,8 @@
   (hiccup/html
    (form-to [:post "/accounts"]
             [:div
-             (label "username" "username")
-             (text-field {:placeholder "username"} "username")]
+             (label "name" "nickname")
+             (text-field {:placeholder "nickname"} "name")]
             [:div
              (label "email" "email")
              (email-field {:placeholder "foo@example.com"} "email")]
